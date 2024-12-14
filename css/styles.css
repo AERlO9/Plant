@@ -501,7 +501,7 @@ body {
 
       /**/
       @media (max-width: 768px) {
-        .containeres {
+        .services {
           flex-direction: column;
           align-items: stretch;
         }
@@ -511,6 +511,7 @@ body {
 
       .footer {
         display: flex;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
         justify-content: space-around;
         background-color: #4b2c1a; /* Brown background */
         padding: 20px;
@@ -518,7 +519,9 @@ body {
       }
       
       .footer-section {
-        margin: 0 20px;
+        flex: 1 1 200px; /* Flexible width with a minimum of 200px */
+        margin: 10px; /* Add space between sections */
+        text-align: center; /* Center align for better appearance */
       }
       
       .footer-section h2 {
@@ -533,12 +536,15 @@ body {
       }
       
       .pdo {
-        flex: 1;
-        padding: 150px;
+        padding: 150px; 
+        background-image: url('images/download%20(30).jpeg'); /* Ensure the correct path */
         background-size: cover;
-
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 150px; 
+        margin-bottom: 20px;
       }
-
+      
       .footer-section li {
         margin: 5px 0;
       }
@@ -552,10 +558,40 @@ body {
         text-decoration: underline;
       }
       
-      .foot h4 {
-        font-size:5px;
+      /* Media Query for Smaller Screens */
+      @media (max-width: 768px) {
+        footer {
+          flex-direction: column; /* Stack sections vertically */
+          align-items: center;
+        }
+      
+        .footer-section {
+          flex: 1 1 auto; /* Adjust to take up full width */
+          margin: 10px 0;
+        }
+      
+        .pdo {
+          width: 100px;
+          height: 100px; /* Smaller height for smaller screens */
+          padding: 10px;
+        }
       }
-
+      
+      @media (max-width: 480px) {
+        footer {
+          padding: 10px;
+        }
+      
+        .footer-section ul {
+          font-size: 12px; /* Reduce font size */
+        }
+      
+        .pdo {
+          height: 80px; /* Further reduce height */
+          padding: 5px;
+        }
+      }
+      
       /*plants*/
 
 .mam h1{
